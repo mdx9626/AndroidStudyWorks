@@ -12,6 +12,7 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
+    private String mSuspect;//嫌疑人姓名
 
     public Crime() {
         this(UUID.randomUUID());
@@ -51,5 +52,18 @@ public class Crime {
 
     public void setSolved(boolean solved) {
         mSolved = solved;
+    }
+
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
+    }
+
+    //添加文件名获取方法
+    public String getPhotoFilename(){
+        return "IMG_"+getId().toString()+".jpg";
     }
 }
